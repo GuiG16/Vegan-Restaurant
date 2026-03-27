@@ -1,0 +1,315 @@
+body {
+    text-align: center;
+    background-color: #e2e2e2;
+}
+
+.bg-body-tertiary {
+    background-color: #C6D8D3 !important; 
+}
+
+.section-header {
+    color: #70c573;
+    margin-top: 10pt;
+    margin-left: 25pt;
+    font-family: 'Barriecito';
+    font-size: 48pt;
+}
+
+hr {
+  margin: auto;
+  margin-top: 50pt;
+  width: 1000pt;
+  height: 8pt;
+  border: none;
+  background-color:#03a8e8;
+  border-radius: 999pt;
+}
+@media (max-width: 1366px) {
+  hr {
+    margin: auto;
+    margin-top: 50pt;
+    width: 265pt;
+  }
+}
+
+.top-header {
+  margin-top: 75px;
+  font-family: 'Barriecito';
+  color: #70c573;
+}
+
+
+/*********************************
+* 2. Nav Bar
+*********************************/
+/* NAV CONTAINER */
+#myTopNav {
+  background-color: #C6D8D3;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  margin: 35px auto;
+  backdrop-filter: blur(10px);
+}
+
+/* ALL LINKS (desktop default) */
+#myTopNav a {
+  flex: 1 1 0;
+  padding: 15px 20px;
+  color: #34495e;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* hover states */
+#myTopNav a:hover,
+#myTopNav a:focus {
+  color: #e2e2e2;
+}
+
+/* active link */
+#myTopNav a.active {
+  color: #355e36;
+  font-weight: 600;
+}
+
+/* SLIDING ANIMATION */
+#myTopNav .animation {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: #70c573;
+  border-radius: 20px;
+  transition: left 0.35s ease, width 0.35s ease;
+  z-index: 1;
+}
+
+#myTopNav .animation.start-home    { left: 10%;}
+/* #myTopNav .animation.start-work    { left: 25%; width: 25%; } */
+#myTopNav .animation.start-me      { left: 50%;}
+#myTopNav .animation.start-contact { left: 75%;}
+
+
+#myTopNav a.icon {
+  display: none;
+  flex: 0 0 auto;
+}
+
+/*********************************
+* MOBILE NAV
+*********************************/
+@media screen and (max-width: 600px) {
+
+   #myTopNav {
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    padding: 0;
+    align-items: center;
+    min-height: unset;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 65px; /* Define a height for the fixed bar */
+    z-index: 1000;
+  }
+
+  /* hide nav links */
+  #myTopNav a.nav-link {
+    display: none;
+  }
+
+  /* show hamburger */
+  #myTopNav a.icon {
+    display: block;
+    padding: 14.5px;
+  }
+
+  /* hamburger icon colour */
+  #myTopNav a.icon i {
+    color: #e67e22;
+    font-size: 20px;
+  }
+
+  /* removes the animation bar */
+  #myTopNav .animation {
+    display: none;
+  }
+
+  /* collapse */
+  #myTopNav {
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  /* expanded state */
+  #myTopNav.responsive {
+    margin-left: 20px;
+    width: 90%; 
+    height: 300px;
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #myTopNav.responsive a.nav-link {
+    display: block;
+    text-align: center;
+  }
+
+  #myTopNav a.icon {
+    order: -1;
+    align-self: flex-start;
+  }
+}
+
+/*********************************
+* 3. Hero Section
+*********************************/
+.hero-flex-container {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;       /* vertically aligns */
+  justify-content: center;
+  gap: 40px;                 /* space between text & image */
+  padding: 40px;
+}
+
+.hero-text {
+  font-family: 'Roboto';
+  max-width: 500px;
+}
+
+.hero-header {
+  font-family: 'Barriecito';
+  color: #70c573;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;          /*controls size*/
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.hero-button {
+  background-color: #70c573;
+  padding: 15px 32px;
+  color: #34495e;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+
+/*********************************
+* 4. Menu Section
+*********************************/
+.menu-container {
+  margin: 100px;
+  background: #C6D8D3;
+  height: auto;
+  max-width: 900px;
+  margin: 40px auto;
+  margin-top: 50px;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+}
+
+.menu-header {
+    color: #70c573;
+    margin-top: 10pt;
+    margin-left: 25pt;
+    font-family: 'Barriecito';
+    font-size: 48pt;
+}
+
+.menu-image {
+  width: 100%;        /* fills container */
+  max-width: 700px;  /* prevents it getting too big */
+  height: auto;       /* keeps proportions of image */
+  display: block;
+  margin: 20px auto;  /* centers image */
+  border-radius: 20px;
+}
+
+/*********************************
+* 5. Form (Contact Section)
+*********************************/
+.contact-form {
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.form-header {
+    color: #70c573;
+    margin-top: 50px;
+    margin-left: 25pt;
+    font-family: 'Barriecito';
+    font-size: 48pt;
+}
+
+.form-control {
+  font-family: 'Roboto';
+  margin: auto;
+  width: 50%;
+  border-color: #34495e;
+  background-color: #ffffff;
+  border-radius: 8pt;
+}
+
+.index-btn {
+  margin-top: 20pt;
+  margin-bottom: 50pt;
+  padding: 20pt;
+  padding-left: 30pt;
+  padding-right: 30pt;
+  color:#ecf0f1;
+  background-color: #e67e22;
+  border: none;
+  border-radius: 10pt;
+}
+
+.fa-github {
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 50pt;
+}
+
+.fa-square-linkedin {
+  text-decoration: none;
+  color:#0072b1;
+  margin-bottom: 50pt;
+}
+
+.fa-instagram {
+  text-decoration: none;
+  color:#e67e22;
+  margin-bottom: 50pt;
+}
