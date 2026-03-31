@@ -88,8 +88,8 @@ window.addEventListener("load", () => {
       y: 100,
       scrollTrigger: {
         trigger: element,
-        start: "top 95%",
-        end: "top 40%",
+        start: "top 90%",
+        end: "top 50%",
         scrub: 1.5
         
       }
