@@ -88,9 +88,10 @@ window.addEventListener("load", () => {
       y: 100,
       scrollTrigger: {
         trigger: element,
-        start: "top 90%",
-        end: "top 60%",
+        start: "top 95%",
+        end: "top 40%",
         scrub: true
+        
       }
     });
   });
