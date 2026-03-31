@@ -90,7 +90,7 @@ window.addEventListener("load", () => {
         trigger: element,
         start: "top 95%",
         end: "top 40%",
-        scrub: true
+        scrub: 1.5
         
       }
     });
@@ -103,4 +103,30 @@ window.addEventListener("scroll", () => {
   } else {
     nav.style.boxShadow = "none";
   }
+});
+
+function setActiveLink(sectionId) {
+
+  links.forEach(link => {
+    link.classList.remove("active");
+
+    if (link.getAttribute("href") === "#" + sectionId) {
+      link.classList.add("active");
+      moveToLink(link); // moves the green slider
+    }
+  });
+
+}
+
+const sections = document.querySelectorAll("section");
+
+sections.forEach(section => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top 60%",
+    end: "bottom center",
+
+    onEnter: () => setActiveLink(section.id),
+    onEnterBack: () => setActiveLink(section.id)
+  });
 });
