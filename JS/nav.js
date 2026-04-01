@@ -118,15 +118,18 @@ function setActiveLink(sectionId) {
 
 }
 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section[id]");
 
 sections.forEach(section => {
   ScrollTrigger.create({
     trigger: section,
-    start: "top 60%",
+    start: "top center",
     end: "bottom center",
 
-    onEnter: () => setActiveLink(section.id),
-    onEnterBack: () => setActiveLink(section.id)
+    onToggle: self => {
+      if (self.isActive) {
+        setActiveLink(section.id);
+      }
+    }
   });
 });

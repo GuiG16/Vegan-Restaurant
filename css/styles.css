@@ -188,7 +188,7 @@ hr {
 *********************************/
 .hero-flex-container {
   margin-top: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   display: flex;
   align-items: center;       /* vertically aligns */
   justify-content: center;
@@ -235,7 +235,6 @@ hr {
   height: auto;
   max-width: 900px;
   margin: 40px auto;
-  margin-top: 50px;
   padding: 20px;
   padding-bottom: 40px;
   border-radius: 20px;
@@ -311,5 +310,5 @@ hr {
 .fa-instagram {
   text-decoration: none;
   color:#e67e22;
-  margin-bottom: 50pt;
+  margin-bottom: 100pt;
 }
