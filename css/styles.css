@@ -38,6 +38,11 @@ hr {
   color: #70c573;
 }
 
+section {
+  min-height: 100vh;
+  padding-top: 120px; /* space for sticky navbar */
+}
+
 
 /*********************************
 * 2. Nav Bar
