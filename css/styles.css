@@ -38,11 +38,6 @@ hr {
   color: #70c573;
 }
 
-section {
-  min-height: 100vh;
-  padding-top: 120px; /* space for sticky navbar */
-}
-
 
 /*********************************
 * 2. Nav Bar
@@ -116,26 +111,25 @@ section {
 /*********************************
 * MOBILE NAV
 *********************************/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
 
-   #myTopNav {
-    margin-left: 20px;
+  #myTopNav {
     display: flex;
-    justify-content: flex-start;
-    width: auto;
-    padding: 0;
-    align-items: center;
-    min-height: unset;
+    flex-direction: column;
+    align-items: stretch;
 
     position: fixed;
     top: 0;
     left: 0;
-    height: 65px; /* Define a height for the fixed bar */
-    z-index: 1000;
+
+    width: 5.75%;
+    margin-top: 5px;
+    margin-left: 15px;
   }
 
   /* hide nav links */
   #myTopNav a.nav-link {
+    flex: 1 1 0;
     display: none;
   }
 
@@ -147,7 +141,7 @@ section {
 
   /* hamburger icon colour */
   #myTopNav a.icon i {
-    color: #e67e22;
+    color: #34495e;
     font-size: 20px;
   }
 
@@ -165,7 +159,7 @@ section {
   /* expanded state */
   #myTopNav.responsive {
     margin-left: 20px;
-    width: 90%; 
+    width: 80%; 
     height: 300px;
     overflow-y: auto;
     flex-direction: column;
@@ -183,9 +177,14 @@ section {
   }
 
   #myTopNav a.icon {
+    display: block;
     order: -1;
     align-self: flex-start;
   }
+}
+
+#myTopNav a.icon {
+  flex: 0 0 auto;
 }
 
 /*********************************

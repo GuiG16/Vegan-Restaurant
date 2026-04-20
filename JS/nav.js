@@ -5,18 +5,20 @@
 const nav = document.getElementById("myTopNav");
 const animation = nav.querySelector(".animation");
 const links = nav.querySelectorAll("a.nav-link");
+const hamburger = document.querySelector("#myTopNav .icon");
 
+hamburger.addEventListener("click", () => {
+  nav.classList.toggle("responsive");
+});
 links.forEach(link => {
   link.addEventListener("click", function () {
 
-    // remove active from all
     links.forEach(l => l.classList.remove("active"));
-
-    // add to clicked one
     this.classList.add("active");
 
-    // move animation to it
     moveToLink(this);
+
+    nav.classList.remove("responsive"); // closes mobile menu
   });
 });
 
@@ -132,4 +134,8 @@ sections.forEach(section => {
       }
     }
   });
+});
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
 });
